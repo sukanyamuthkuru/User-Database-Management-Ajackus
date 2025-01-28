@@ -1,0 +1,28 @@
+.user-form-label-input-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+.user-form-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 30vw;
+  padding: 30px;
+}
+.userForm-label {
+  font-family: 'Roboto';
+  margin-bottom: 10px;
+}
+.add-user-button {
+  border: none;
+  background-color: black;
+  border-radius: 10px;
+  color: white;
+  padding: 10px;
+}
+.user-form-select-from-dropdown-text {
+  font-family: 'Roboto';
+  margin-top: 0px;
+  margin-bottom: 3px;
+  font-size: 10px;
+}
