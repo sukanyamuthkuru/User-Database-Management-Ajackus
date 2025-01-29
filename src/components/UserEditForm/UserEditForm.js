@@ -19,7 +19,6 @@ class UserEditForm extends Component {
     firstNameError: false,
     lastnameError: false,
     emailError: false,
-    firstNameEdit: '',
   }
 
   render() {
@@ -37,7 +36,7 @@ class UserEditForm extends Component {
             onChangeLastName,
             onChangeEmail,
             onChangeDepartment,
-            addUser,
+
             edittedId,
             onClickEditUserFormButton,
           } = value
@@ -94,8 +93,7 @@ class UserEditForm extends Component {
 
           const onSubmitUserEditForm = event => {
             event.preventDefault()
-            const {firstNameEdit} = this.state
-            this.setState({firstNameEdit: firstName})
+
             console.log(edittedId)
 
             if (firstName !== '' && lastName !== '' && email !== '') {

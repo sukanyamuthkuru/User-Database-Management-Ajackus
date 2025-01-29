@@ -96,7 +96,6 @@ class App extends Component {
   }
 
   onClickEditUserFormButton = editedUserList => {
-    const {firstName, lastName, email, department} = this.state
     this.setState({
       isAdd: true,
       userList: editedUserList,
