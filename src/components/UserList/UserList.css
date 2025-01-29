@@ -1,0 +1,35 @@
+.user-list-container {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding-left: 0px;
+}
+.user-list-headings-container {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+  border: 1px;
+}
+.user-list-headings {
+  min-width: 8vw;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-weight: bold;
+  padding: 10px;
+}
+.id-width {
+  min-width: 3vw;
+  margin-right: 0px;
+}
+.first-name-width {
+  min-width: 10vw;
+  max-width: 10vw;
+}
+.last-name-width {
+  min-width: 10vw;
+  max-width: 10vw;
+}
+.email-width {
+  min-width: 15vw;
+  max-width: 15vw;
+}

@@ -5,6 +5,8 @@ const ManagementContext = React.createContext({
   addUser: () => {},
   deleteUser: () => {},
   editUser: () => {},
+  edittedId: '',
+  onClickEditUserFormButton: () => {},
   firstName: '',
   lastName: '',
   email: '',
@@ -13,6 +15,8 @@ const ManagementContext = React.createContext({
   onChangeLastName: () => {},
   onChangeEmail: () => {},
   onChangeDepartment: () => {},
+  isAdd: true,
+  isAddFunction: () => {},
 })
 
 export default ManagementContext

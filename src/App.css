@@ -11,6 +11,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.app-container {
+  padding: 20px;
+}
+
+.user-form-and-user-list-container {
+  display: flex;
+  flex-direction: row;
+}
+
 .user-database-heading {
   font-family: 'Roboto';
 }

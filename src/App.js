@@ -2,6 +2,8 @@ import {Component} from 'react'
 
 import ManagementContext from './context/ManagementContext'
 import UserForm from './components/UserForm/UserForm'
+import UserList from './components/UserList/UserList'
+import UserEditForm from './components/UserEditForm/UserEditForm'
 
 import './App.css'
 
@@ -22,7 +24,9 @@ class App extends Component {
     firstName: '',
     lastName: '',
     email: '',
-    department: '',
+    department: departmentList[0],
+    isAdd: true,
+    edittedId: '',
   }
 
   componentDidMount() {
@@ -62,6 +66,7 @@ class App extends Component {
   }
 
   onChangeEmail = email => {
+    console.log(email, 'edit')
     this.setState({email})
   }
 
@@ -70,12 +75,55 @@ class App extends Component {
   }
 
   addUser = newUser => {
-    this.setState(preState => ({userList: [...preState.userList, newUser]}))
+    this.setState(preState => ({
+      userList: [...preState.userList, newUser],
+      firstName: '',
+      lastName: '',
+      email: '',
+      department: departmentList[0],
+    }))
+  }
+
+  editUser = item => {
+    this.setState({
+      isAdd: false,
+      firstName: item.firstName,
+      lastName: item.lastName,
+      email: item.email,
+      department: item.department,
+      edittedId: item.id,
+    })
+  }
+
+  onClickEditUserFormButton = editedUserList => {
+    const {firstName, lastName, email, department} = this.state
+    this.setState({
+      isAdd: true,
+      userList: editedUserList,
+      firstName: '',
+      lastName: '',
+      email: '',
+      department: departmentList[0],
+    })
+  }
+
+  deleteUser = id => {
+    const {userList} = this.state
+    const newList = userList.filter(each => each.id !== id)
+
+    this.setState({userList: newList})
   }
 
   render() {
-    const {userList, firstName, lastName, email, department} = this.state
-    console.log(userList)
+    const {
+      userList,
+      firstName,
+      lastName,
+      email,
+      department,
+      isAdd,
+      edittedId,
+    } = this.state
     return (
       <ManagementContext.Provider
         value={{
@@ -89,11 +137,20 @@ class App extends Component {
           onChangeDepartment: this.onChangeDepartment,
           department,
           addUser: this.addUser,
+          editUser: this.editUser,
+          isAdd,
+          isAddFunction: this.editUser,
+          onClickEditUserFormButton: this.onClickEditUserFormButton,
+          edittedId,
+          deleteUser: this.deleteUser,
         }}
       >
-        <h1 className="user-database-heading">User Database Management</h1>
-        <div className="user-form-and-user-list-container">
-          <UserForm />
+        <div className="app-container">
+          <h1 className="user-database-heading">User Database Management</h1>
+          <div className="user-form-and-user-list-container">
+            {isAdd ? <UserForm /> : <UserEditForm />}
+            <UserList />
+          </div>
         </div>
       </ManagementContext.Provider>
     )
