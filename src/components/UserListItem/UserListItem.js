@@ -23,7 +23,7 @@ const UserListItem = props => {
       </button>
       <button
         type="button"
-        className="delete-button"
+        className="edit-button delete-button"
         onClick={onClickDeleteUser}
       >
         Delete

@@ -33,3 +33,20 @@
   min-width: 15vw;
   max-width: 15vw;
 }
+.users-list-head {
+  font-family: 'Roboto';
+}
+.users-list-heading-search-input-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.search-input {
+  padding: 10px;
+  max-height: 3vh;
+  max-width: 10vw;
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 5px;
+}

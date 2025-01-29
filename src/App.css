@@ -20,6 +20,13 @@ body {
   flex-direction: row;
 }
 
+@media (max-width: 768px) {
+  .user-form-and-user-list-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .user-database-heading {
   font-family: 'Roboto';
 }

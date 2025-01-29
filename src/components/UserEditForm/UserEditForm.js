@@ -187,6 +187,7 @@ class UserEditForm extends Component {
                   value={department}
                   onChange={onChangeUserDepartment}
                   id="departmentEdit"
+                  className="user-form-input"
                 >
                   {departmentList.map(each => (
                     <DropDownOptions key={each} item={each} />

@@ -5,8 +5,11 @@
 .user-list-text {
   min-width: 8vw;
   margin-top: 0px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   padding: 10px;
+  overflow: hidden;
+  margin-right: 15px;
+  font-family: 'Roboto';
 }
 .id-width {
   min-width: 3vw;
@@ -22,4 +25,19 @@
 .email-width {
   max-width: 15vw;
   min-width: 15vw;
+}
+.edit-button {
+  padding: 10px;
+  max-width: 5vw;
+  max-height: 4vh;
+  margin-right: 25px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  background-color: green;
+  color: white;
+  font-family: 'Roboto';
+}
+.delete-button {
+  background-color: red;
 }

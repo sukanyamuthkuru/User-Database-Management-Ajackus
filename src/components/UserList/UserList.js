@@ -62,13 +62,14 @@ class UserList extends Component {
 
           return (
             <div>
-              <div>
-                <h1>Users List</h1>
+              <div className="users-list-heading-search-input-container">
+                <h1 className="users-list-head">Users List</h1>
                 <input
                   type="search"
                   value={searchInput}
                   onChange={onChangeSearchInput}
                   placeholder="Search By First Name"
+                  className="search-input"
                 />
               </div>
               {emptyList ? <p>Add User To the List</p> : renderUserList()}

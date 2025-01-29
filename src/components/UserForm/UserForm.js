@@ -169,7 +169,11 @@ class UserForm extends Component {
                 <p className="user-form-select-from-dropdown-text">
                   Select From The Dropdown
                 </p>
-                <select value={department} onChange={onChangeUserDepartment}>
+                <select
+                  value={department}
+                  onChange={onChangeUserDepartment}
+                  className="user-form-input"
+                >
                   {departmentList.map(each => (
                     <DropDownOptions key={each} item={each} />
                   ))}
